@@ -52,9 +52,22 @@
 											@foreach($books as $key => $data)
 												<li>
 													<article class="box post-excerpt">
-											           <p>{{ $data->title }}</p>
-											            <p>{{ $data->author }}</p>
-											           <p>{{ $data->price }}</p>
+														<div class="container-fluid">
+															<div class="row">
+																<div class="col-md-2">
+																	<img src= {{ $data->cover }} width="50%"; height="auto"/>
+																</div>
+																<div class="col-md-3">
+																	
+																<h4>{{ $data->title }}</h4><br>
+																<br>
+													            <strong>Autor:</strong> {{ $data->author }}<br>
+													            <strong>ISBN: </strong>{{ $data->isbn }}<br>
+													            <strong>Precio: </strong>{{ $data->price }}<br>
+																	
+																</div>													
+															</div>
+														</div>
 													</article>
 
                 <!-- show the nerd (uses the show method found at GET /nerds/{id} -->

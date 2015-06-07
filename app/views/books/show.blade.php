@@ -54,7 +54,7 @@
 											    		<p>
 											        		<strong>ISBN:</strong> {{ $books->isbn }}<br>
 											        		<strong>Año: </strong> {{ $books->year }} <br>
-											        		<strong>Precio:</strong>$ {{ $books->price }}
+											        		<strong>Precio:</strong>$ {{ $books->price }} <br>
 											        		<strong>Cantidad en Stock: </strong> {{ $books->stock}}
 											    		</p>
 													</article>

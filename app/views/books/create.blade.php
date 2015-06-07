@@ -66,16 +66,18 @@
 							{{ Form::text('stock', Input::old('stock'), array(
 							 'class' => 'form-control', 'onKeyPress' => 'return soloNumeros(event)', 'placeholder' => 'Cantidad en Stock')) }}
 						</div>
-						<input type="file" name="cover">																			
+						{{Form::file('cover')}}																		
 					</div>
 					<div class="row">
 						<div class="12u">
 							<ul class="actions">
-								{{ Form::submit('Add to stock', array('class' => 'style1')) }}
+								{{ Form::submit('Add to stock', array('class' => 'style1')) }} 
 							{{ Form::close() }}
 							</ul>
 						</div>
+
 					</div>
 				</form>
-		</article>
+		</article>   
 	</div>
+
