@@ -11,7 +11,7 @@
 							<blockquote style="color:white;">
 								“Fairy tales are more than true: not because they tell us that dragons exist,<br>
 								but because they tell us that dragons can be beaten.” ― Neil Gaiman
-							</blockquote>|
+							</blockquote>
 						</div>
 
 					<!-- Nav -->

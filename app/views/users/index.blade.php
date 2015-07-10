@@ -12,7 +12,7 @@
 								“Books are the quietest and most constant of friends;<br>
 								they are the most accessible and wisest of counselors,<br>
 								and the most patient of teachers.” ― Charles William Eliot
-							</blockquote>|
+							</blockquote>
 						</div>
 
 					<!-- Nav -->
@@ -58,9 +58,9 @@
 											           <p>{{ $data->city }}</p>
 													</article>
 
-                <!-- show the nerd (uses the show method found at GET /nerds/{id} -->
+                <!-- show the user (uses the show method found at GET /users/{id} -->
                 <a class="style1" href="{{ URL::to('users/' . $data->id) }}"><i class="fa fa-inbox"></i></a>
-                <!-- edit this nerd (uses the edit method found at GET /nerds/{id}/edit -->
+                <!-- edit this user (uses the edit method found at GET /users/{id}/edit -->
                 <a class="style2" href="{{ URL::to('users/' . $data->id . '/edit') }}"><i class="fa fa-edit"></i></a>
 												</li>
 											@endforeach

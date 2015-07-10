@@ -1391,7 +1391,7 @@
 		input[type="reset"].style1,
 		button.style1,
 		.button.style1 {
-			background: #e97770 url("../images/overlay.png");
+			background: #81d8d0 url("../images/overlay.png");
 			color: #fff;
 		}
 
@@ -1400,7 +1400,7 @@
 			input[type="reset"].style1:hover,
 			button.style1:hover,
 			.button.style1:hover {
-				background-color: #f98780;
+				background-color: #48779a;
 			}
 
 			input[type="button"].style1:active,
@@ -1408,7 +1408,7 @@
 			input[type="reset"].style1:active,
 			button.style1:active,
 			.button.style1:active {
-				background-color: #d96760;
+				background-color: #007694;
 			}
 
 		input[type="button"].style2,

@@ -10,7 +10,7 @@
 							<h1><a href="index.html">Dracary's Bookstore</a></h1>
 							<blockquote style="color:white;">
 								“There is no friend as loyal as a book.” ― Ernest Hemingway
-							</blockquote>|
+							</blockquote>
 						</div>
 
 					<!-- Nav -->

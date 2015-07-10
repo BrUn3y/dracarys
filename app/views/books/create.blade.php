@@ -4,34 +4,30 @@
 			<!-- Header -->
 				<div id="header-wrapper" class="wrapper">
 					<div id="header">
-
-						<!-- Logo -->
-							<div id="logo">
-								<h1><a href="index.html">Dracary's Bookstore</a></h1>
-								<blockquote style="color:white;">
-								“A room without books is like a body without a soul.” ― Marcus Tullius Cicero
-								</blockquote>|
-							</div>
-							<nav id="nav">
-								@include('includes.navUser')
-							</nav>
+						<div id="logo">
+							<h1><a href="index.html">Dracary's Bookstore</a></h1>
+							<blockquote style="color:white;">
+							“A room without books is like a body without a soul.” ― Marcus Tullius Cicero
+							</blockquote>
+						</div>
+						<nav id="nav">
+							@include('includes.navUser')
+						</nav>
 					</div>
 				</div>
 
 			<!-- Main -->
 				<div class="wrapper style2">
 					<div class="title">Registro de Libros</div>
-					<div id="main" class="container">
-
-						<!-- Content -->
+						<div id="main" class="container">
 							<div id="content">
 								<article class="box post">
 									<header class="style1">
 										<p>Catálogo<br class="mobile-hide" />
 										Porfavor rellene cuidadosamente los datos correspondientes.</p>
-										<p><!-- if there are creation errors, they will show here -->
-            								{{ HTML::ul($errors->all()) }}</p>
-            								 @if (Session::has('message'))
+										<p><!-- Si ocurre un error al guardar datos, se mostrará aqui -->
+	        								{{ HTML::ul($errors->all()) }}</p>
+	        								 @if (Session::has('message'))
 							                  <div class="alert alert-info"><span>{{ Session::get('message') }}</span></div>
 							                  @endif								
 									</header>
@@ -75,7 +71,6 @@
 							{{ Form::close() }}
 							</ul>
 						</div>
-
 					</div>
 				</form>
 		</article>   

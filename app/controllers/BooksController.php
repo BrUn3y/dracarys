@@ -10,7 +10,8 @@ class BooksController extends \BaseController {
 	public function index()
 	{
 		// get all the books
-		$books = Books::all(); //donde Books es el nombre de nuestro modelo
+		$books = Books::all(); /*donde Books es el nombre de nuestro modelo 
+								y all es la función que permite traernos todos los datos almacenados.*/
 
 			// load the view and pass the users
 			return View::make('books.index',array('books' => $books)); 
@@ -57,9 +58,13 @@ class BooksController extends \BaseController {
         	$filename = Input::get('isbn').'.jpg';
         	$path = (public_path() != '') ? public_path() : '/public/cover';
         	$destinationPath = $path;
+        	/* destinationPath es la ruta donde se va a guardar la imagen
+        	del libro, la imagen se guarda con el nombre del isbn del libro.
+				*/
 
 				if(Input::file('cover') != ""){
 				Input::file('cover')->move($destinationPath, $filename);
+
 				}
 
 		var_dump($path);
@@ -76,7 +81,17 @@ class BooksController extends \BaseController {
             $books->save();
 
             // redirect
-            Session::flash('message', $destinationPath);
+            //Session::flash('message', $destinationPath); <-- este mensaje sólo muestra la ruta donde se supone debe guardarse la img
+            Session::flash('message', 'Libro guardado exitósamente');
+            /*session flash es un mensage que aparece después de haberse cumplido la condición, tal el caso de guardar un nuevo libro.
+            	para mostrarlo sólo hay que colocar esta línea en donde quieres ponerlo: */
+
+
+            /*	@if (Session::has('message'))
+			*	{{ Session::get('message') }}
+            *	@endif
+            */
+
             return Redirect::to('books/create');
         }
 	}
@@ -93,7 +108,6 @@ class BooksController extends \BaseController {
 		// get the books
         $books = Books::find($id);
 
-        // show the view and pass the nerd to it
         return View::make('books.show',array('books' => $books));
 	}
 
@@ -111,7 +125,6 @@ class BooksController extends \BaseController {
 
         // show the edit form and pass the book
         return View::make('books.edit', array('books' => $books));
-            //->with('nerd', $nerd);
 	}
 
 
