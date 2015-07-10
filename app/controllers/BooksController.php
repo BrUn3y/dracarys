@@ -53,9 +53,21 @@ class BooksController extends \BaseController {
         if ($validator->fails()) {
             return Redirect::to('books/create');
         } else {
+        		// imagen
+        	$filename = Input::get('isbn').'.jpg';
+        	$path = (public_path() != '') ? public_path() : '/public/cover';
+        	$destinationPath = $path;
+
+				if(Input::file('cover') != ""){
+				Input::file('cover')->move($destinationPath, $filename);
+				}
+
+		var_dump($path);
+
             // store
             $books = new Books;
             $books->title   = Input::get('title');
+            $books->cover 	= $filename;
             $books->author  = Input::get('author');            
             $books->year 	= Input::get('year');
             $books->isbn 	= Input::get('isbn');
@@ -64,7 +76,7 @@ class BooksController extends \BaseController {
             $books->save();
 
             // redirect
-            Session::flash('message', 'Guardado exitosamente en la base de datos!');
+            Session::flash('message', $destinationPath);
             return Redirect::to('books/create');
         }
 	}
