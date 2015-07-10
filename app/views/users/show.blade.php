@@ -52,10 +52,10 @@
 													<article class="box post-excerpt">														
 											    		<p>
 											        		<strong>Apellidos:</strong> {{ $users->lastname }}<br>
-											        		<strong>RFC: </strong> {{ $users->rfc }} <br>
-											        		<strong>Dirección: </strong> {{ $users->address }} <br>
-											        		<strong>Ciudad:</strong> {{ $users->city }} <br>
-											        		<strong>e-mail: </strong> {{ $users->email}}
+											        		<strong>RFC: </strong> 		{{ $users->rfc }} <br>
+											        		<strong>Dirección: </strong>{{ $users->address }} <br>
+											        		<strong>Ciudad:</strong> 	{{ $users->city }} <br>
+											        		<strong>e-mail: </strong> 	{{ $users->email}}
 											    		</p>
 													</article>
 												</li>

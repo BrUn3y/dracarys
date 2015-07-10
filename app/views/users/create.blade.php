@@ -47,29 +47,29 @@
 												</div>
 												<div class="6u 12u(mobile)">
 													{{ Form::text('lastname', Input::old('lastname'), array(
-							 'class' => 'form-control', 'required', 'autofocus', 'placeholder' => 'Apellidos')) }}
+							 'class' => 'form-control', 'required', 'placeholder' => 'Apellidos')) }}
 												</div>												
 											</div>
 											<div class="row 50%">
 												<div class="6u 12u(mobile)">
 													{{ Form::text('rfc', Input::old('rfc'), array(
-							 'class' => 'form-control', 'required', 'autofocus', 'placeholder' => 'RFC')) }}
+							 'class' => 'form-control', 'required', 'placeholder' => 'RFC')) }}
 												</div>
 												<div class="6u 12u(mobile)">
 													{{ Form::text('address', Input::old('address'), array(
-							 'class' => 'form-control', 'required', 'autofocus', 'placeholder' => 'Dirección')) }}
+							 'class' => 'form-control', 'required', 'placeholder' => 'Dirección')) }}
 												</div>
 												<div class="6u 12u(mobile)">
 													{{ Form::text('city', Input::old('city'), array(
-							 'class' => 'form-control', 'required', 'autofocus', 'placeholder' => 'Ciudad')) }}
+							 'class' => 'form-control', 'required', 'placeholder' => 'Ciudad')) }}
 												</div>
 												<div class="6u 12u(mobile)">
 													{{ Form::email('email', Input::old('email'), array(
-							 'class' => 'form-control', 'required', 'autofocus', 'placeholder' => 'email@sample.com')) }}
+							 'class' => 'form-control', 'required', 'placeholder' => 'email@sample.com')) }}
 												</div>
 												<div class="6u 12u(mobile)">
-													{{ Form::password('password', Input::old('password'), array(
-							 'class' => 'form-control', 'required', 'autofocus', 'placeholder' => 'Contraseña')) }}
+													{{ Form::password('password', array(
+							 'class' => 'form-control', 'required', 'placeholder' => 'contraseña')) }}
 												</div>																			
 											</div>
 											<div class="row">

@@ -51,12 +51,11 @@
 							 'class' => 'form-control', 'required', 'placeholder' => 'Año de Publicación', 'onKeyPress' => 'return soloNumeros(event)')) }}
 						</div>
 						<div class="6u 12u(mobile)">
-							{{ Form::text('isbn', Input::old('isbn'), array(
-							'class' => 'form-control', 'placeholder' => 'ISBN')) }}
+							{{ Form::text('isbn', Input::old('isbn'), array('class' => 'form-control', 'required', 'placeholder' => 'ISBN')) }}
 						</div>
 						<div class="6u 12u(mobile)">
 							 {{ Form::text('price', Input::old('price'), array(
-							 'class' => 'form-control', 'onKeyPress' => 'return soloNumeros(event)', 'placeholder' => 'Precio')) }}
+							 'class' => 'form-control', 'onKeyPress' => 'return soloNumeros(event)', 'placeholder' => '$ Precio')) }}
 						</div>
 						<div class="6u 12u(mobile)">
 							{{ Form::text('stock', Input::old('stock'), array(
